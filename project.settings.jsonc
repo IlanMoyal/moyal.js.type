@@ -1,0 +1,59 @@
+/*
+ * Edit this file to set all project settings.
+ */{
+    "project:fullname": "moyal.js.type", 
+    "scope": "@moyal",
+    "lib": "js-type", 
+    "version": "1.0.0",
+    "description": "Minimal, robust type detection and value classification utility for JavaScript.",
+    "sideEffects": false, 
+    "author": "Ilan Moyal",
+    "author:website": "https://www.moyal.es",
+    "author:twitter:username": "i_moyal",
+    "author:linkedin:username": "ilanam",
+    "license": "MIT",
+    "license:short-text": "MIT License - free to use, modify, and distribute.",
+    "sourceFolder": "src",
+    "sourceFile": "index.js",
+    "testFolder": "test",
+    "examplesFolder": "examples",
+    "outputFolder": "./dist",
+    "outputBaseFilename": "moyal.type", 
+    "outputExposedName": "MoyalType", 
+    "exampleExportedName": "TypeUtils", 
+    "devDependencies": {
+        "@eslint/js": "^9.25.0",
+        "@rollup/plugin-terser": "^0.4.3",
+        "chokidar": "^4.0.3",
+        "comment-json": "^4.2.5",
+        "eslint": "^9.25.0",
+        "globals": "^16.0.0",
+        "jsdoc": "^4.0.4",
+        "jsdoc-to-markdown": "^9.1.1",
+        "rollup": "^3.0.0",
+        "docdash": "^2.0.2",
+        "@moyal/js-test": "^2.1.8"
+    },
+    "dependencies": {
+        // TODO: Add keyword list
+    },
+    "git:repository-name": "moyal.js.type", 
+    "git:username": "IlanMoyal",
+    "keywords": [
+        "type",
+        "typeof",
+        "type-check",
+        "type-utils",
+        "type-detection",
+        "is-type",
+        "is-empty",
+        "get-type",
+        "infer-type",
+        "parse-boolean",
+        "type-name",
+        "cross-realm",
+        "javascript",
+        "utility",
+        "moyal"
+    ]
+}
