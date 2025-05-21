@@ -247,7 +247,7 @@ export function isPrimitive(value) {
 /**
  * Checks if the value is an integer (number or bigint), optionally applying a custom predicate.
  * @param {*} value - The value to test.
- * @param {function(NumericValue):boolean} [additionalPredicate = null] - Additional test to apply to the value.
+ * @param {function(number):boolean} [additionalPredicate = null] - Additional test to apply to the value.
  * @returns {boolean} - `true` if the value is integral number and passed the test against the additional predicate (if it was specified) .
  */
 export function isIntegral(value, additionalPredicate = null) { 
