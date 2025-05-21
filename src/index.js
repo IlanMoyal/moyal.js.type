@@ -23,8 +23,16 @@
  * @module TypeUtils
  */
 
+import BuildInfo from "./auto-generated/build-info.js";
+
 const __primitives = ["string", "number", "bigint", "boolean", "symbol"];
 const __object_toString = Object.prototype.toString;
+
+/**
+ * Returns the semantic version of this library.
+ * @returns {string} - The semantic version of this library.
+ */
+export function version() { return BuildInfo.version; }
 
 /**
  * Determines whether the given function is a user defined class constructor.

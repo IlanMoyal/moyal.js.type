@@ -1,7 +1,7 @@
 {
   "x-moyal-auto-generated-comment": "THIS IS AN AUTO_GENERATED FILE. DON'T EDIT IT! INSTEAD EDIT build/package.template.jsonc and project.settings.jsonc",
   "name": "@moyal/js-type",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Minimal, robust type detection and value classification utility for JavaScript.",
   "type": "module",
   "types": "./dist/types/moyal.type.d.ts",

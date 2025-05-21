@@ -11,6 +11,7 @@ Utility functions for working with data types.
             * [.originalValue](#module_TypeUtils.InferDataTypeResult+originalValue) : <code>\*</code>
             * [.parsedValue](#module_TypeUtils.InferDataTypeResult+parsedValue) : <code>\*</code>
             * [.type](#module_TypeUtils.InferDataTypeResult+type) : <code>string</code> \| <code>null</code>
+        * [.version()](#module_TypeUtils.version) ⇒ <code>string</code>
         * [.getTypeName(value)](#module_TypeUtils.getTypeName) ⇒ <code>string</code>
         * [.isType(value, typeName)](#module_TypeUtils.isType) ⇒ <code>boolean</code>
         * [.isString(value)](#module_TypeUtils.isString) ⇒ <code>boolean</code>
@@ -82,6 +83,13 @@ Represents the result of inferred data type conversion.
 
 #### inferDataTypeResult.type : <code>string</code> \| <code>null</code>
 **Kind**: instance property of [<code>InferDataTypeResult</code>](#module_TypeUtils.InferDataTypeResult)  
+<a name="module_TypeUtils.version"></a>
+
+### TypeUtils.version() ⇒ <code>string</code>
+Returns the semantic version of this library.
+
+**Kind**: static method of [<code>TypeUtils</code>](#module_TypeUtils)  
+**Returns**: <code>string</code> - - The semantic version of this library.  
 <a name="module_TypeUtils.getTypeName"></a>
 
 ### TypeUtils.getTypeName(value) ⇒ <code>string</code>
