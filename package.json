@@ -1,9 +1,10 @@
 {
   "x-moyal-auto-generated-comment": "THIS IS AN AUTO_GENERATED FILE. DON'T EDIT IT! INSTEAD EDIT build/package.template.jsonc and project.settings.jsonc",
   "name": "@moyal/js-type",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Minimal, robust type detection and value classification utility for JavaScript.",
   "type": "module",
+  "types": "./dist/types/moyal.type.d.ts",
   "sideEffects": false,
   "main": "./dist/moyal.type.cjs.js",
   "module": "./dist/moyal.type.mjs",
@@ -15,6 +16,7 @@
   "author": "Ilan Moyal",
   "license": "MIT",
   "scripts": {
+    "types": "node ./scripts/generate-ts.js",
     "validate:has-commits": "node ./scripts/validate-has-commits.js",
     "validate:clean": "node ./scripts/validate-clean.js",
     "sync:package": "node ./scripts/sync-package.js",
@@ -44,7 +46,7 @@
     "postinstall": "npm run sync:back",
     "clean": "node ./scripts/clean.js",
     "prebuild": "npm run sync && npm run check",
-    "build": "npm run clean && node ./scripts/build.js",
+    "build": "npm run clean && npm run types && node ./scripts/build.js",
     "prepack": "npm run validate:clean && npm run build && npm run docs",
     "pack:local": "npm run publish:switch && bash ./scripts/pack-local.sh && node ./scripts/publish-switch.js restore",
     "pack:preview": "bash ./scripts/pack-preview.sh",
@@ -59,6 +61,8 @@
   "devDependencies": {
     "@eslint/js": "^9.25.0",
     "@rollup/plugin-terser": "^0.4.3",
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
     "chokidar": "^4.0.3",
     "comment-json": "^4.2.5",
     "eslint": "^9.25.0",
@@ -67,7 +71,8 @@
     "jsdoc-to-markdown": "^9.1.1",
     "rollup": "^3.0.0",
     "docdash": "^2.0.2",
-    "@moyal/js-test": "^2.1.8"
+    "@moyal/js-test": "^2.1.8",
+    "typescript": "^5.8.3"
   },
   "files": [
     "./dist/",

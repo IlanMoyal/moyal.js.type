@@ -4,7 +4,7 @@
     "project:fullname": "moyal.js.type", 
     "scope": "@moyal",
     "lib": "js-type", 
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Minimal, robust type detection and value classification utility for JavaScript.",
     "sideEffects": false, 
     "author": "Ilan Moyal",
@@ -24,6 +24,8 @@
     "devDependencies": {
         "@eslint/js": "^9.25.0",
         "@rollup/plugin-terser": "^0.4.3",
+        "@rollup/plugin-commonjs": "^28.0.3",
+        "@rollup/plugin-node-resolve": "^16.0.1",
         "chokidar": "^4.0.3",
         "comment-json": "^4.2.5",
         "eslint": "^9.25.0",
@@ -32,7 +34,8 @@
         "jsdoc-to-markdown": "^9.1.1",
         "rollup": "^3.0.0",
         "docdash": "^2.0.2",
-        "@moyal/js-test": "^2.1.8"
+        "@moyal/js-test": "^2.1.8",
+        "typescript": "^5.8.3"
     },
     "dependencies": {
         // TODO: Add keyword list

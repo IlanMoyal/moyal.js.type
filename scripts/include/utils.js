@@ -259,4 +259,36 @@ export default class utils {
 			console.log(`✅ Running from the project root: ${resolvedRoot}`);
 		}
 	}
+
+	/**
+	 * Replaces a file extension or a specific string suffix with a new value.
+	 *
+	 * @param {string} filePath - The original file path or name.
+	 * @param {string} matchEnding - The string to match at the end (e.g., '.js').
+	 * @param {string} replacement - The string to replace it with (e.g., '.d.ts').
+	 * @returns {string} - The updated file path.
+	 */
+	static replaceEnding(filePath, matchEnding, replacement) {
+		if (filePath.endsWith(matchEnding)) {
+			return filePath.slice(0, -matchEnding.length) + replacement;
+		}
+		return filePath;
+	}
+
+	/**
+	 * Renames a file.
+	 *
+	 * @param {string} oldPath - The current path of the file.
+	 * @param {string} newPath - The new desired path.
+	 * @returns {Promise<void>}
+	 */
+	static renameFile(oldPath, newPath) {
+		try {
+			fs.renameSync(oldPath, newPath);
+			console.log(`Renamed: ${oldPath} → ${newPath}`);
+		} catch (err) {
+			console.error(`Failed to rename ${oldPath}:`, err);
+			throw err;
+		}
+	}
 }

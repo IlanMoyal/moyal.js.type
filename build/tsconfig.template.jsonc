@@ -1,0 +1,19 @@
+/*!
+ * Template for typescript configuraiton.
+ */
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": "{{outputFolder}}/types",
+    "rootDir": "{{sourceFolder}}",
+    "module": "ESNext",
+    "target": "ES2020",
+    "moduleResolution": "Node",
+    "strict": true,
+    "esModuleInterop": true
+  },
+  "include": ["{{sourceFolder}}"],
+  "exclude": ["{{sourceFolder}}/auto-generated"]
+}
